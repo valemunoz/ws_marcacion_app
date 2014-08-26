@@ -1,5 +1,5 @@
 CREATE TABLE app_marcador (
-    id_marca integer NOT NULL,
+    id_marca serial NOT NULL,
     dni character varying(30),
     nombre character varying(300),
     fecha timestamp without time zone,
