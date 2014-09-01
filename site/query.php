@@ -2,7 +2,7 @@
 include("../funciones.php");
 $path_img="http://www.architeq.cl/tui/load_marca";
 $data_server= explode("?",$_SERVER['HTTP_REFERER']);
-$estado_sesion=estado_sesion();
+//$estado_sesion=estado_sesion();
 if(1==1)
 {
 	if($_REQUEST['tipo']==1)
@@ -63,7 +63,7 @@ if(1==1)
 		{
 			$query .=" and fecha <= '".$_REQUEST['hasta']." 23:59:59'"	;
 		}	
-		$query .=" order by fecha desc";
+		//$query .=" order by fecha desc";
 		
 		$marcaciones=getMarcas($query);
 		//print_r($marcaciones);
@@ -97,12 +97,12 @@ if(1==1)
 					<td><?=$tipo?></td>
 					<?php
 					//echo "".$path_img."/".$us[5]."";
-					if(is_array(getimagesize(''.$path_img.'/'.$us[5].'')))
+					/*if(is_array(getimagesize(''.$path_img.'/'.$us[5].'')))
 					{
 						?>
 						<td><a href="javascript:ver('<?=$us[5]?>');"><img src="img/find.png"></a></td>
 						<?php
-					}
+					}*/
 					?>
 				</tr>
 				<?php
